@@ -1,0 +1,47 @@
+
+Baixando e configurando o Git
+O GitHub é uma plataforma que depende do sistema Git para fazer sua mágica. Por meio dele, você será capaz de criar repositórios e modificar seus arquivos utilizando o terminal de comando, o que garante mais agilidade no gerenciamento dos arquivos.
+
+Por isso, o primeiro passo é baixar a ferramenta do site oficial e fazer a sua instalação. Feito isso, será preciso configurar seus dados de usuário para identificar seus commits, que são as modificações realizadas por cada usuário. Para definir seu nome, digite na linha de comando:
+
+$ git config --global user.name "Nome"
+Depois, informe seu e-mail com o seguinte comando:
+
+$ git config --global user.email "e-mail@exemplo.com"
+A partir desse ponto, você estará pronto para gerenciar o desenvolvimento de seus projetos por meio do sistema Git de forma local.
+
+Criando um repositório local
+Com a linha de comando do Git aberta, é preciso informar o diretório em que estão os arquivos que serão gerenciados em um repositório. Isso é feito utilizando o comando ‘cd’ antes do caminho completo. Fica mais ou menos assim:
+
+$ cd c:/Pasta do projeto
+Se estiver tudo certo, o caminho informado aparecerá na linha seguinte à frente da sua identificação de equipamento e usuário. Aí, bastará digitar o comando ‘git init’ para iniciar um novo repositório local no diretório selecionado.
+
+$ git init
+Adicionando arquivos ao novo repositório
+Após ter criado seu novo repositório local, você deverá adicionar a ele os arquivos contidos na pasta escolhida, já que isso não acontece de forma automática. Para adicionar individualmente, o comando a ser utilizado é o ‘git add’. Veja um exemplo:
+
+$ git add index.html
+Também é possível adicionar todos os arquivos contidos no diretório de uma vez com os comandos ‘git add -A’ e ‘git add .’. O primeiro deles atualiza todo o repositório, inclusive eliminando arquivos que tiverem sido excluídos no diretório. Já a segunda opção adiciona apenas os arquivos que de fato foram modificados, sem remover os demais.
+
+Para efetivar essas alterações, digite o comando ‘git commit’, que ainda aceita uma descrição para facilitar consultas futuras.
+
+$ git commit 'Comentário do commit'
+A partir de agora, vamos mostrar como criar um repositório no GitHub e enviar o seu projeto local para a plataforma.
+
+Criando um repositório no GitHub
+Após se cadastrar e fazer login em sua conta no GitHub, procure pela opção “New repository”. Ela pode ser encontrada na barra lateral esquerda do site ou no ícone “+” que fica na barra superior.
+
+Na tela seguinte, você definirá as principais informações sobre o seu novo repositório GitHub. A primeira delas será o seu nome, que será utilizado por quem quiser acessar os seus arquivos na plataforma. Por isso, o ideal é que ele seja curto, objetivo e fácil de ser lembrado. O nome final não pode conter espaços e caracteres especiais, que são substituídos automaticamente caso utilizados.
+
+Logo abaixo é possível inserir uma descrição para seu novo repositório, o que ajudará tanto na sua própria organização quanto a orientar os interessados em visualizar seus projetos.
+
+Prosseguindo, será preciso escolher se o repositório será público ou privado. Os repositórios públicos podem ser visualizados por qualquer pessoa, mas o proprietário pode definir quem realizará os commits. Já os privados podem ter seu acesso restrito apenas para as pessoas autorizadas pelo administrador.
+
+Conectando o Git ao Github
+Após a criação, a tela seguinte fornecerá as informações necessárias para configurar o repositório criado no GitHub com o seu projeto local. No prompt de comando, digite os seguintes comandos para realizar esse processo:
+
+$ git remote add origin https://github.com/username/repositorio.git
+$ git push -u origin master
+Ao inserir o segundo comando, uma caixa de diálogo do GitHub se abrirá para que seja feita a autenticação, com o nome de usuário e a senha cadastradas na plataforma.
+
+
